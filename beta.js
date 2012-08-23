@@ -64,6 +64,11 @@ var submitForm=function()
 
     var email=$('#emailInput').val();
 
+    if(val===null || val=="")
+    {
+        return;
+    }
+
     var data=JSON.stringify({'method': 'submitEmail', 'id': '1', 'params': [email]});
 
     post('http://giftttdemo.appspot.com/actions', data)
