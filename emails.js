@@ -9,7 +9,7 @@ var log=function(msg)
 var addEmail=function(email)
 {
     var li='<li>'+email+'</li>';
-    $('#orderList').append(li);
+    $('#emails').append(li);
 }
 
 var fetchEmails=function()
