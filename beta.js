@@ -35,36 +35,39 @@ parseUri.options = {
     }
 };
 
+var post=function(url, data)
+{
+    $.ajax({
+        type: 'POST',
+        url: url,
+        crossDomain: true,
+        data: data,
+        dataType: 'json',
+        success: function(responseData, textStatus, jqXHR) {
+            log('post success');
+        },
+        error: function (responseData, textStatus, errorThrown) {
+            log('post failure');
+        }
+    });
+}
+
 var submitForm=function()
 {
     log('submitForm()');
 
-    var product=$('#product').attr('href');
-    var name=$('#name').val();
-    var address1=$('#address1').val();
-    var address2=$('#address2').val();
-    var city=$('#city').val();
-    var state=$('#state').val();
-    var zip=$('#zip').val();
-    var date=$('#datepicker').val();
+    var email=$('#email').val();
 
-    data={'product': product, 'name': name, 'address1': address1, 'address2': address2, 'city': city, 'state': state, 'zip': zip, 'date': date};
-    log('data:');
-    log(data);
+    var data=JSON.stringify({'method': 'submitEmail', 'id': '1', 'args': [email]});
+
+    post('http://giftttdemo.appspot.com/actions', data)
 
     return false;
 }
 
-var initCalendar=function()
+var initBeta=function()
 {
-    uri=parseUri(location.href);
-    product=decodeURIComponent(uri['queryKey']['product']);
-    log('product: '+product);
-
-    $('#product').attr('href', product);
-    $("#datepicker").datepicker();
-
     $('#submit').click(submitForm);
 }
 
-$(document).ready(initCalendar);
+$(document).ready(initBeta);
