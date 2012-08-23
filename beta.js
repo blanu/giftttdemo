@@ -64,7 +64,7 @@ var submitForm=function()
 
     var email=$('#emailInput').val();
 
-    if(val===null || val=="")
+    if(email==null || email=="")
     {
         return false;
     }
