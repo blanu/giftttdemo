@@ -57,7 +57,7 @@ var submitForm=function()
 {
     log('submitForm()');
 
-    var email=$('#email').val();
+    var email=$('#emailInput').val();
 
     var data=JSON.stringify({'method': 'submitEmail', 'id': '1', 'params': [email]});
 
