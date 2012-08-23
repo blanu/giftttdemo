@@ -58,7 +58,7 @@ var submitForm=function()
 
     var email=$('#email').val();
 
-    var data=JSON.stringify({'method': 'submitEmail', 'id': '1', 'args': [email]});
+    var data=JSON.stringify({'method': 'submitEmail', 'id': '1', 'params': [email]});
 
     post('http://giftttdemo.appspot.com/actions', data)
 
