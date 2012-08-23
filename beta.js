@@ -37,7 +37,7 @@ parseUri.options = {
 
 var post=function(url, data)
 {
-    log('posting: '+str(data));
+    log('posting: '+data);
     $.ajax({
         type: 'POST',
         url: url,
