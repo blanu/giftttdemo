@@ -53,6 +53,11 @@ var post=function(url, data)
     });
 }
 
+var redirectToThanks=function(url)
+{
+  window.location='thanks.html';
+}
+
 var submitForm=function()
 {
     log('submitForm()');
@@ -62,6 +67,7 @@ var submitForm=function()
     var data=JSON.stringify({'method': 'submitEmail', 'id': '1', 'params': [email]});
 
     post('http://giftttdemo.appspot.com/actions', data)
+    redirectToThanks();
 
     return false;
 }
