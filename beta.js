@@ -66,7 +66,7 @@ var submitForm=function()
 
     if(val===null || val=="")
     {
-        return;
+        return false;
     }
 
     var data=JSON.stringify({'method': 'submitEmail', 'id': '1', 'params': [email]});
