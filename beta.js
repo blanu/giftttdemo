@@ -6,6 +6,12 @@ var log=function(msg)
   }
 }
 
+var validateEmail=function(email)
+{ 
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+} 
+
 function parseUri (str) {
     var o   = parseUri.options,
         m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
@@ -70,6 +76,12 @@ var submitForm=function()
     if(email==null || email=="")
     {
         return false;
+    }
+
+    if(!validateEmail(email))
+    {
+      $('#emailInput').val('');
+      return false;
     }
 
     var data=JSON.stringify({'method': 'submitEmail', 'id': '1', 'params': [email]});
