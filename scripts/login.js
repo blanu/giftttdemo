@@ -186,4 +186,17 @@ function login()
   FB.Event.subscribe('auth.login', function(response) {
     log('auth.login');
   });
+
+  FB.Event.subscribe('auth.logout', function(response) {
+    log('auth.logout');
+  });
+
+  FB.Event.subscribe('auth.authResponseChange', function(response) {
+    log('auth.authResponseChange');
+  });
+
+  FB.Event.subscribe('auth.statusChange', function(response) {
+    log('auth.statusChange');
+  });
+
 }
