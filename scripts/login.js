@@ -169,6 +169,7 @@ function checkLoggedIn()
 
 function loggedIn(response)
 {
+  log('loggedIn');
   if (!response.session)
   {
     initLogout();
