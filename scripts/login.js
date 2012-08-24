@@ -38,10 +38,7 @@ function initLogin()
   log('initLogin');
 
   $('#user-info').show();
-  $('#logout').show();
   $('#friends').show();
-
-//  $('#login').hide();
 
   $('#status').text('Logged in');
 
@@ -55,7 +52,6 @@ function initLogout()
   $('#login').show();
 
   $('#user-info').hide();
-  $('#logout').hide();
   $('#friends').hide();
 
   $('#status').text('Logged out');
