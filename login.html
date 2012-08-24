@@ -1,23 +1,78 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!doctype html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <title>Flaaare - You know what it is!</title>
+    <link href="assets/styles/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/styles/style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <div id="loginDiv" class="hidden">
+      <fb:login-button/>
+    </div>
+    <br/>
+    <div id="logoutDiv" class="hidden">
+      <button id="logout">Logout</button>
+    </div>
+    <div id="like" class="hidden">
+      <fb:like href="http://www.facebook.com/apps/application.php?id=248930761793687" send="true" width="450" show_faces="false" action="like" font=""></fb:like>
+<!--      <fb:like-box href="http://www.facebook.com/apps/application.php?id=248930761793687" width="292" show_faces="false" border_color="" stream="false" header="true"></fb:like-box>-->
+    </div>
+    <div id="bookmark" class="hidden">
+      <fb:bookmark></fb:bookmark>
+    </div>
+    <div id="invite" class="hidden">
+      <button id="inviteButton">Invite a fool</button>
+    </div>
+    <table>
+    <tr>
+    <td><span id="user-info" class="hidden"></span></td>
+    <td>
+     <div id="update" class="hidden">
+        is
+        <textarea id="updateField"></textarea>
+        at
+        <textarea id="updateWhere"></textarea>
+        for
+        <select id="updateTime">
+          <option value="15">15 minutes</option>
+          <option value="30">30 minutes</option>
+          <option value="45">45 minutes</option>
+          <option value="60">1 hour</option>
+          <option value="90">1 and a half hours</option>
+          <option value="120">2 hours</option>
+          <option value="180">3 hours</option>
+          <option value="240">4 hours</option>
+          <option value="300">5 hours</option>
+          <option value="360">6 hours</option>
+        </select>
+        <button id="updateButton">Light a Flare!</button>
+     </div>
+    </td>
+    <td>
+     <span id="flares" class="hidden">
+        <span id="flareIsWas">is</span> <span id="flareStatus"></span> at <span id="flareWhere"></span> <span id="flareFor">for</span> <span id="flareTime"></span> <span id="flareAgo"></span>
+        <button id="extinguishButton">Extinguish</button>
+     </span>
+    </td>
+    </tr>
+    </table>
+    <div id="tabs" class="hidden">
+      <ul>
+        <li>
+          <a href="#people"><span>People</span></a>
+        </li>
+      </ul>
+    </div>
+    <div id="people" class="hidden">
+      <ul class="friends"></ul>
+    </div>
+  </body>
 
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Gifttt Emails</title>
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.22/themes/base/jquery-ui.css" type="text/css" media="all">
-<style type="text/css">body { font: 20px georgia; } h1 { font-size: 30px; }</style>
- <script type="text/javascript"></script>
-</head>
-<body>
-
-<h1>Emails</h1>
-
-<ul id="emails">
-</ul>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
-<script src="emails.js"></script>
-</body>
+  <script src="assets/scripts/jquery.min.js"></script>
+  <script src="assets/scripts/jquery-ui.min.js"></script>
+  <script src="assets/scripts/facebook.js"></script>
+  <script src="assets/scripts/debug.js"></script>
+  <script src="assets/scripts/index.js"></script>
+  <script src="assets/scripts/login.js"></script>
 </html>
