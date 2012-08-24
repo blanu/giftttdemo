@@ -40,8 +40,6 @@ function initLogin()
   $('#user-info').show();
   $('#friends').show();
 
-  $('#status').text('Logged in');
-
   loadFriends();
 }
 
@@ -53,8 +51,6 @@ function initLogout()
 
   $('#user-info').hide();
   $('#friends').hide();
-
-  $('#status').text('Logged out');
 }
 
 function logout()
