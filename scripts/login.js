@@ -2,10 +2,10 @@ function initLogin()
 {
   log('initLogin');
 
-  $('#user-info').show('slow');
-  $('#logout').show('slow');
+  $('#user-info').show();
+  $('#logout').show();
 
-  $('#login').hide('slow');
+  $('#login').hide();
 
   $('#status').text('Logged in');
 }
@@ -14,10 +14,10 @@ function initLogout()
 {
   log('initLogout');
 
-  $('#login').show('slow');
+  $('#login').show();
 
-  $('#user-info').hide('slow');
-  $('#logout').hide('slow');
+  $('#user-info').hide();
+  $('#logout').hide();
 
   $('#status').text('Logged out');
 }
