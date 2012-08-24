@@ -35,7 +35,17 @@ parseUri.options = {
     }
 };
 
-var post=function(url, data)
+var redirectToThanks=function(url)
+{
+  window.location='thanks.html';
+}
+
+var postSuccess=function()
+{
+  redirectToThanks();
+}
+
+var post=function(url, data, successCallback)
 {
     log('posting: '+data);
     $.ajax({
@@ -44,18 +54,11 @@ var post=function(url, data)
         crossDomain: true,
         data: data,
         dataType: 'json',
-        success: function(responseData, textStatus, jqXHR) {
-            log('post success');
-        },
+        success: successCallback,
         error: function (responseData, textStatus, errorThrown) {
             log('post failure');
         }
     });
-}
-
-var redirectToThanks=function(url)
-{
-  window.location='thanks.html';
 }
 
 var submitForm=function()
@@ -71,8 +74,7 @@ var submitForm=function()
 
     var data=JSON.stringify({'method': 'submitEmail', 'id': '1', 'params': [email]});
 
-    post('http://giftttdemo.appspot.com/actions', data)
-    redirectToThanks();
+    post('http://giftttdemo.appspot.com/actions', data, postSuccess)
 
     return false;
 }
