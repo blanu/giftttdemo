@@ -183,24 +183,7 @@ function loggedIn(response)
 function login()
 {
   log('login');
-  FB.getLoginStatus(function(response) {
-    log('got login status');
-  if (response.status === 'connected') {
-    // the user is logged in and has authenticated your
-    // app, and response.authResponse supplies
-    // the user's ID, a valid access token, a signed
-    // request, and the time the access token
-    // and signed request each expire
-    var uid = response.authResponse.userID;
-    var accessToken = response.authResponse.accessToken;
-    log('connected');
-  } else if (response.status === 'not_authorized') {
-    // the user is logged in to Facebook,
-    // but has not authenticated your app
-    log('not_authorized');
-  } else {
-    // the user isn't logged in to Facebook.
-    log('not logged in');
-  }
- }, true);
+  FB.Event.subscribe('auth.login', function(response) {
+    log('auth.login');
+  });
 }
