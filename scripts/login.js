@@ -185,18 +185,22 @@ function login()
   log('login');
   FB.Event.subscribe('auth.login', function(response) {
     log('auth.login');
+    log(response);
   });
 
   FB.Event.subscribe('auth.logout', function(response) {
     log('auth.logout');
+    log(response);
   });
 
   FB.Event.subscribe('auth.authResponseChange', function(response) {
     log('auth.authResponseChange');
+    log(response);
   });
 
   FB.Event.subscribe('auth.statusChange', function(response) {
     log('auth.statusChange');
+    log(response);
   });
 
 }
