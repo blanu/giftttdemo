@@ -184,6 +184,7 @@ function login()
 {
   log('login');
   FB.getLoginStatus(function(response) {
+    log('got login status');
   if (response.status === 'connected') {
     // the user is logged in and has authenticated your
     // app, and response.authResponse supplies
