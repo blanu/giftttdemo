@@ -1,5 +1,6 @@
 function gotFriends(response)
 {
+  log('loaded friends');
   for(var i=0; i<response.length; i++)
   {
     var friend=response[i];
@@ -10,6 +11,7 @@ function gotFriends(response)
 
 function loadFriends()
 {
+  log('loading friends');
   FB.api('/me/friends', gotFriends);
 }
 
