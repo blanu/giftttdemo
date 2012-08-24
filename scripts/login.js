@@ -10,11 +10,11 @@ function gotFriends(response)
 
     if(friend.birthday!=null)
     {
-      var item='<li>'+friend.name+' '+friend.birthday+'</li>';
+      var item='<li><span class="name">'+friend.name+'</span><span class="birthday">'+friend.birthday+'</span></li>';
     }
     else
     {
-      var item='<li>'+friend.name+'</li>';
+      var item='<li><span class="name">'+friend.name+'</span></li>';
     }
 
     $('#friends').append(item);
