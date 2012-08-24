@@ -6,6 +6,8 @@ function initLogin()
   $('#logout').show('slow');
 
   $('#login').hide('slow');
+
+  $('#status').text('Logged in');
 }
 
 function initLogout()
@@ -16,6 +18,8 @@ function initLogout()
 
   $('#user-info').hide('slow');
   $('#logout').hide('slow');
+
+  $('#status').text('Logged out');
 }
 
 function login()
