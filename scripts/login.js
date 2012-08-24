@@ -2,13 +2,21 @@ function gotFriends(response)
 {
   log('loaded friends');
   log(response);
-  for(var i=0; i<response.data.length; i++)
+  for(var i=0; i<response.length; i++)
   {
-    var friend=response.data[i];
+    var friend=response[i];
     log('friend:');
     log(friend);
 
-    var item='<li>'+friend.name+'</li>';
+    if(friend.birthday!=null)
+    {
+      var item='<li>'+friend.name+' '+friend.birthday+'</li>';
+    }
+    else
+    {
+      var item='<li>'+friend.name+'</li>';
+    }
+
     $('#friends').append(item);
   }
 }
@@ -21,11 +29,7 @@ function loadFriends()
   {
     log('got me');
     var query = FB.Data.query('SELECT uid,name,birthday FROM user WHERE uid IN (SELECT uid2 FROM friend WHERE uid1='+response.id+')');
-    query.wait(function(rows)
-    {
-      log('got rows:');
-      log(rows);
-    });
+    query.wait(gotFriends);
   });
 }
 
@@ -37,7 +41,7 @@ function initLogin()
   $('#logout').show();
   $('#friends').show();
 
-  $('#login').hide();
+//  $('#login').hide();
 
   $('#status').text('Logged in');
 
