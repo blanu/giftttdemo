@@ -12,6 +12,7 @@ function gotFriends(response)
         log('friend:');
         log(friend);
       }
+    }
   }
 }
 
