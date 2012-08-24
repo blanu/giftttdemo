@@ -10,6 +10,8 @@ function initLogin()
   $('#like').show('slow');
   $('#invite').show('slow');
 
+  $('#login').hide('slow');
+
   FB.api(
     {
       method: 'fql.query',
