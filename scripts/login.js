@@ -1,3 +1,18 @@
+function gotFriends(response)
+{
+  for(var i=0; i<response.length; i++)
+  {
+    var friend=response[i];
+    log('friend:');
+    log(friend);
+  }
+}
+
+function loadFriends()
+{
+  FB.api('/me/friends', gotFriends);
+}
+
 function initLogin()
 {
   log('initLogin');
@@ -8,6 +23,8 @@ function initLogin()
   $('#login').hide();
 
   $('#status').text('Logged in');
+
+  loadFriends();
 }
 
 function initLogout()
