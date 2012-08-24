@@ -183,16 +183,6 @@ function loggedIn(response)
 function login()
 {
   log('login');
-  FB.init({ apiKey: '248930761793687', status: true, cookie: true, xfbml: true });
+//  FB.init({ apiKey: '248930761793687', status: true, cookie: true, xfbml: true });
   FB.getLoginStatus(loggedIn);
-
-  $('#login').bind('click', function() {
-    FB.login(loggedIn);
-  });
-
-  $('#logout').bind('click', function() {
-    FB.logout(loggedIn);
-  });
 }
-
-$(document).ready(login);

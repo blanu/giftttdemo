@@ -7,7 +7,7 @@
       xfbml      : true  // parse XFBML
     });
 
-    // Additional initialization code here
+    login();
   };
 
   // Load the SDK Asynchronously
