@@ -22,9 +22,19 @@ function initLogout()
   $('#status').text('Logged out');
 }
 
+function logout()
+{
+  FB.logout(function(response) {
+    log('Logged out');
+  });
+}
+
 function login()
 {
   log('login');
+
+  $('#logout').click(logout);
+
   FB.Event.subscribe('auth.login', function(response) {
     log('auth.login');
     log(response);
