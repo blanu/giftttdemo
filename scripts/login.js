@@ -7,6 +7,9 @@ function gotFriends(response)
     var friend=response.data[i];
     log('friend:');
     log(friend);
+
+    var item='<li>'+friend.name+'</li>';
+    $('#friends').append(item);
   }
 }
 
@@ -22,6 +25,7 @@ function initLogin()
 
   $('#user-info').show();
   $('#logout').show();
+  $('#friends').show();
 
   $('#login').hide();
 
@@ -38,6 +42,7 @@ function initLogout()
 
   $('#user-info').hide();
   $('#logout').hide();
+  $('#friends').hide();
 
   $('#status').text('Logged out');
 }
