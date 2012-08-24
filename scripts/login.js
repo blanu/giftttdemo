@@ -202,5 +202,5 @@ function login()
     // the user isn't logged in to Facebook.
     log('not logged in');
   }
- });
+ }, true);
 }
