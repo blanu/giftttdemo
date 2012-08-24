@@ -1,6 +1,7 @@
 function gotFriends(response)
 {
   log('loaded friends');
+  log(response);
   for(var i=0; i<response.length; i++)
   {
     var friend=response[i];
