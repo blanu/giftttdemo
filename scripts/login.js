@@ -3,43 +3,19 @@ function initLogin()
   log('initLogin');
 
   $('#user-info').show('slow');
-  $('#loginDiv').hide('slow');
-  $('#tabs').show('slow');
-  $('#people').show('slow');
-  $('#bookmark').show('slow');
-  $('#like').show('slow');
-  $('#invite').show('slow');
+  $('#logout').show('slow');
 
   $('#login').hide('slow');
-
-  FB.api(
-    {
-      method: 'fql.query',
-      query: 'SELECT name, pic FROM profile WHERE id=' + FB.getSession().uid
-    },
-    function(response) {
-      var user = response[0];
-     $('#user-info').html('<img class="icon" src="' + user.pic + '">' + user.name).show('slow');
-    }
-  );
-
-  refresh();
 }
 
 function initLogout()
 {
   log('initLogout');
 
+  $('#login').show('slow');
+
   $('#user-info').hide('slow');
-  $('#logoutDiv').hide('slow');
-  $('#loginDiv').show('slow');
-  $('#update').hide('slow');
-  $('#flares').hide('slow');
-  $('#tabs').hide('slow');
-  $('#people').hide('slow');
-  $('#bookmark').hide('slow');
-  $('#like').hide('slow');
-  $('#invite').hide('slow');
+  $('#logout').hide('slow');
 }
 
 function login()
