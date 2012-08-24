@@ -2,20 +2,11 @@ function gotFriends(response)
 {
   log('loaded friends');
   log(response);
-  var data=response.data;
-  log(data);
-  log(data[0]);
-  for(var i=0; i<data.length; i++)
+  for(var i=0; i<response.data.length; i++)
   {
-    for(var j=0; j<data[i].length; j++)
-    {
-      for(var k=0; k<data[i][j].length; k++)
-      {
-        var friend=data[i][j][k];
-        log('friend:');
-        log(friend);
-      }
-    }
+    var friend=response.data[i];
+    log('friend:');
+    log(friend);
   }
 }
 
