@@ -63,11 +63,11 @@ function login()
     log(response);
     if(response.status=="connected")
     {
-      initLogout();
+      initLogin();
     }
     else
     {
-      initLogin();
+      initLogout();
     }
   });
 }
