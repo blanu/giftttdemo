@@ -16,7 +16,17 @@ function gotFriends(response)
 function loadFriends()
 {
   log('loading friends');
-  FB.api('/me/friends', gotFriends);
+//  FB.api('/me/friends', gotFriends);
+  FB.api('/me', function(response)
+  {
+    log('got me');
+    var query = FB.Data.query('SELECT uid,name,birthday FROM user WHERE uid IN (SELECT uid2 FROM friend WHERE uid1='+response.id+')');
+    query.wait(function(rows)
+    {
+      log('got rows:');
+      log(rows);
+    });
+  });
 }
 
 function initLogin()
