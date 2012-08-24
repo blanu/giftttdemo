@@ -2,6 +2,7 @@ function gotFriends(response)
 {
   log('loaded friends');
   log(response);
+  var data=response.data;
   for(var i=0; i<data.length; i++)
   {
     for(var j=0; j<data[i].length; j++)
