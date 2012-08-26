@@ -6,6 +6,12 @@ var log=function(msg)
   }
 }
 
+var validateEmail=function(email)
+{ 
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+} 
+
 function parseUri (str) {
     var o   = parseUri.options,
         m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
@@ -35,7 +41,17 @@ parseUri.options = {
     }
 };
 
-var post=function(url, data)
+var redirectToThanks=function(url)
+{
+  window.location='thanks.html';
+}
+
+var postSuccess=function()
+{
+  redirectToThanks();
+}
+
+var post=function(url, data, successCallback)
 {
     log('posting: '+data);
     $.ajax({
@@ -44,18 +60,11 @@ var post=function(url, data)
         crossDomain: true,
         data: data,
         dataType: 'json',
-        success: function(responseData, textStatus, jqXHR) {
-            log('post success');
-        },
+        success: successCallback,
         error: function (responseData, textStatus, errorThrown) {
             log('post failure');
         }
     });
-}
-
-var redirectToThanks=function(url)
-{
-  window.location='thanks.html';
 }
 
 var submitForm=function()
@@ -69,10 +78,15 @@ var submitForm=function()
         return false;
     }
 
+    if(!validateEmail(email))
+    {
+      $('#emailInput').val('');
+      return false;
+    }
+
     var data=JSON.stringify({'method': 'submitEmail', 'id': '1', 'params': [email]});
 
-    post('http://giftttdemo.appspot.com/actions', data)
-    redirectToThanks();
+    post('http://giftttdemo.appspot.com/actions', data, postSuccess)
 
     return false;
 }
