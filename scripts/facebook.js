@@ -1,7 +1,7 @@
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '248930761793687', // App ID
-      channelUrl : '//blanu.net/gifttt/channel.html', // Channel File
+      appId      : '112559145559278', // App ID
+      channelUrl : '//gifttt.com/channel.html ', // Channel File
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
