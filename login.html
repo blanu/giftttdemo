@@ -22,9 +22,28 @@
   </head>
   <body>
     <div id="fb-root"></div>
-    <div id="user-info" class="hidden"></div>
+
+    <img src="gifttticon.png"/>
+    <span id="logo">Gifttt</span>
     <div id="login" class="fb-login-button" autologoutlink="true" scope="email,friends_birthday"></div>
-    <ul id="friends" class="hidden"></ul>
+
+    <hr/>
+
+    <div id="main" class="hidden">
+        <span id="reminders">Gifttt reminders</span>
+        <button id="addPeople">Add People</button>
+        <input type="text" value="Search"/>
+
+        <hr/>
+
+        <div id="people">
+        </div>
+
+        <button id="moreFriendsButton">More Friends</button>
+        <div id="moreFriends" class="hidden">
+            <ul id="friends" class="hidden"></ul>
+        </div>
+    </div>
   </body>
 
   <script src="scripts/jquery.min.js"></script>

@@ -37,8 +37,7 @@ function initLogin()
 {
   log('initLogin');
 
-  $('#user-info').show();
-  $('#friends').show();
+  $('#main').show();
 
   loadFriends();
 }
@@ -47,10 +46,7 @@ function initLogout()
 {
   log('initLogout');
 
-  $('#login').show();
-
-  $('#user-info').hide();
-  $('#friends').hide();
+  $('#main').hide();
 }
 
 function logout()
@@ -60,9 +56,17 @@ function logout()
   });
 }
 
+function moreFriendsClicked()
+{
+  $('#moreFriends').show();
+}
+
 function login()
 {
   log('login');
+
+  $('#moreFriendsButton').click(moreFriendsClicked);
+
   FB.Event.subscribe('auth.login', function(response) {
     log('auth.login');
     log(response);
