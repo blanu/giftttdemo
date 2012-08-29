@@ -5,19 +5,21 @@ function gotFriends(response)
   for(var i=0; i<response.length; i++)
   {
     var friend=response[i];
-    log('friend:');
-    log(friend);
+
+    var instance=$("#peopleTemplate").clone();
+    instance.attr('id', friend.name);
+    instance.children("#name").text(friend.name);
 
     if(friend.birthday!=null)
     {
-      var item='<li><span class="name">'+friend.name+'</span><span class="birthday">'+friend.birthday+'</span></li>';
+      instance.children("#holidayItem").text(friend.birthday);
     }
     else
     {
-      var item='<li><span class="name">'+friend.name+'</span></li>';
+
     }
 
-    $('#friends').append(item);
+    $('#friends').append(instance);
   }
 }
 
@@ -58,7 +60,9 @@ function logout()
 
 function moreFriendsClicked()
 {
+  log('moreFriendsClicked');
   $('#moreFriends').show();
+  $('#friends').show(); // FIXME - unhide #friends in HTML
 }
 
 function login()
