@@ -27,9 +27,14 @@
 		body {
 			background-image: url('http://www.gifttt.com/bgtile.png');
 		}
-
+		
 		.text{
 			font-family: 'Quicksand', sans-serif;
+			color: #363636;
+			text-shadow:1px 1px #FFffff;
+		}
+		.text2{
+			font-family:Arial,Helvetica,sans-serif;
 			color: #363636;
 			text-shadow:1px 1px #FFffff;
 		}
@@ -61,9 +66,15 @@
 					Gifttt Reminders
         		</div>
 
-        		<div style ="float:right; width: 302px; height:36px; margin-top: 12px;">
-        			<button id="addPeople">Add People</button>
-       				<input style="padding: 2px; font-size: 16px; font-family: 'Quicksand', sans-serif; color: #363636;" class="text" value="Search"/>
+        		<div style ="float:right; width: 313px; height:36px; margin-top: 12px;">
+        			
+        			<button style="border-top:none;border-left:none;border-right:none;border-color:#ebebeb;float:left;background: url('addbutton.png'); width: 105px; margin-right:16px; height: 30px; margin-top: -1px;" id="addPeople">
+        			<div class="text" style="font-size: 11px;text-align:left; padding-top: 4px;">
+        			Add People
+        			</div>
+        			</button>
+       				
+       				<input style="float:left;padding: 2px; font-size: 16px; font-family: 'Quicksand', sans-serif; color: #363636;" class="text" value="Search"/>
         		</div>
 
 			</div>
@@ -75,25 +86,28 @@
 
         <div id="people">
             <div id="peopleTemplate" class="template">
-                <img class="profilePic" src=""/>
-                <span class="name">Tester McTesterson</span>
-                <div class="holidays">
+            	<!--Template for each user block--!>
+            	<div style="width:266; margin:34px 34px 34px 34px;">
+                <div style="float:left;"><img class="profilePic" src="user.png"/></div>
+                <div style="float:left;"><h4><span class="text" class="name">Tester McTesterson</span></h2></div>
+                <div class="holidays" style="width:266px;">
                     <div class="holdaysHeader">
-                        <span class="holidaysText">Holidays</span>
+                        <span class="text2" class="holidaysText">Holidays</span>
                         <button class="addButton">+</button>
                     </div>
                     <ul>
-                        <li class="holidayItem">Click the + to add holidays</li>
+                        <li class="text2" class="holidayItem">Click the + to add holidays</li>
                     </ul>
                 </div>
                 <div class="gifts">
                     <div class="giftsHeader">
-                        <span class="giftsText">Gift Ideas</span>
-                        <button class="addButton">+</button>
+                        <span class="text2" class="giftsText">Gift Ideas</span>
+                        <button class="text2" class="addButton">+</button>
                     </div>
                     <ul>
-                        <li class="giftItem">Click the + to add gift ideas</li>
+                        <li class="text2" class="giftItem">Click the + to add gift ideas</li>
                     </ul>
+                </div>
                 </div>
             </div>
         </div>
