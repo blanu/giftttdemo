@@ -6,18 +6,20 @@ function gotFriends(response)
   {
     var friend=response[i];
 
-    var instance=$("#peopleTemplate").clone();
+    var instance=$('#peopleTemplate').clone();
     instance.attr('id', friend.name);
-    instance.children("#name").text(friend.name);
+    instance.children('.name').text(friend.name);
 
     if(friend.birthday!=null)
     {
-      instance.children("#holidayItem").text(friend.birthday);
+      instance.find('.holidayItem').first().text(friend.birthday);
     }
     else
     {
-
+      instance.find('.holidayItem').first().text('Click the + to add holidays');
     }
+
+    instance.find('.giftItem').first().text('Click the + to add gift ideas');
 
     $('#friends').append(instance);
   }
