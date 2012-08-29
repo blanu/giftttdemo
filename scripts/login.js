@@ -13,7 +13,7 @@ function gotFriends(response)
 
     var instance=$('#peopleTemplate').clone();
     instance.attr('id', friend.name);
-    instance.children('.name').text(friend.name);
+    instance.find('.name').text(friend.name);
 
     if(friend.birthday!=null)
     {
