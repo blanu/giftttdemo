@@ -35,7 +35,6 @@
 		}
 		.text2{
 			font-family:Arial,Helvetica,sans-serif;
-			color: #363636;
 			text-shadow:1px 1px #FFffff;
 		}
     </style>
@@ -86,18 +85,26 @@
         <div id="people">
             <div id="peopleTemplate" class="template">
             	<!--Template for each user block--!>
-            	<div style="width:266; margin:34px 34px 34px 34px;">
-                <div style="float:left;"><img class="profilePic" src="user.png"/></div>
-                <div style="float:left;"><h4><span class="text name">Tester McTesterson</span></h2></div>
-                <div class="holidays" style="width:266px;">
-                    <div class="holdaysHeader">
-                        <span class="text2 holidaysText">Holidays</span>
-                        <button class="addButton">+</button>
+            	<div style="width:268px; margin:34px 34px 34px 34px; ">
+            	<!--User Image--!>
+                <div style="width:50px; height:50px; float:left;"><img class="profilePic" src="user.png"/></div>
+                <!--User Name--!>
+                <div style="width:208px; float:left; text-align: center;padding: 3px;"><strong><span class="text name">Tester McTesterson</span></strong></div>
+                <!--Tiny Present And Ammount--!>
+                <div style="width:46px; float:left; text-align: right;padding: 3px;"><span class="text gifnum">3</span></div>
+                <div style="width:155px; float:left; padding: 2px;"><img src="tinygift.png"/></div>
+                <!--Holiday Text--!>
+                <div class="holidays">
+                    <div class="holdaysHeader" style="width:263px; height:27px; float:left; margin-top: 15px; background-image: url('bar.png');">
+                        <span class="text2 holidaysText"><div style="width:67px; height:17px; color: #7e7e7e; margin-left: 10px; margin-top: 5px;"><strong>Holidays</strong></div></span>
+                    	<button class="addButton" style="border: none; float: right; height:31px; width:33px; background: url('addbuttonsmall.png'); margin-top: -28px; margin-right: 3px;"></button>
+                    </div>
+                        
                     </div>
                     <ul>
                         <li class="text2 holidayItem">Click the + to add holidays</li>
                     </ul>
-                </div>
+
                 <div class="gifts">
                     <div class="giftsHeader">
                         <span class="text2 giftsText">Gift Ideas</span>
