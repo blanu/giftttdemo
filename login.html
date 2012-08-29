@@ -3,32 +3,47 @@
   <head>
     <title>Giffft Login</title>
     <style type="text/css">
-        .hidden
-        {
-            display: none;
+        .hidden{
+			display: none;
         }
 
-        .name
-        {
+        .name{
             color: blue;
         }
-
-        .birthday
-        {
+        
+        .birthday {
             color: green;
             margin-left: 10px;
-        }
+		}
+		
+		div.logo{
+			width: 172px;
+			height: 76px;
+			float: left;
+			padding: 15px;
+		}
+		
+		body {
+			background-image: url('http://www.gifttt.com/bgtile.png');
+		}
     </style>
   </head>
   <body>
+ 
+  <div style="width: 900px; border: 1px solid red; margin-left: auto; margin-right: auto;margin-top:-10px; background: #ffffff;">
+   <div style="width: 900px; height: 100px;">
     <div id="fb-root"></div>
 
-    <img src="gifttticon.png"/>
-    <span id="logo">Gifttt</span>
+    <div style="margin-left:49px; margin-top:12px;width:75px;height:77px;float:left;"><img src="present.png"/></div>
+    <div class="logo"><img src="logosmall.png"/></div>
+    
+    <div style="float:right; margin-right:49px; margin-top:22px;">
     <div id="login" class="fb-login-button" autologoutlink="true" scope="email,friends_birthday"></div>
-
-    <hr/>
-
+	</div>
+	</div>
+	<div style="width: 900px; height:3px;">
+		<div style="width: 830px; height: 1px;background-color:#cccccc; float: left; margin-left:34px;"></div>
+	</div>
     <div id="main" class="hidden">
         <span id="reminders">Gifttt reminders</span>
         <button id="addPeople">Add People</button>
@@ -65,6 +80,8 @@
         <div id="moreFriends" class="hidden">
             <ul id="friends" class="hidden"></ul>
         </div>
+    </div>
+    
     </div>
   </body>
 
