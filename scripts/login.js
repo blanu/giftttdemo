@@ -1,3 +1,8 @@
+function scrubDate(date)
+{
+  return date.split(',')[0];
+}
+
 function gotFriends(response)
 {
   log('loaded friends');
@@ -12,14 +17,8 @@ function gotFriends(response)
 
     if(friend.birthday!=null)
     {
-      instance.find('.holidayItem').first().text(friend.birthday);
+      instance.find('.holidayItem').first().text(scrubDate(friend.birthday));
     }
-    else
-    {
-      instance.find('.holidayItem').first().text('Click the + to add holidays');
-    }
-
-    instance.find('.giftItem').first().text('Click the + to add gift ideas');
 
     $('#friends').append(instance);
   }
@@ -64,7 +63,6 @@ function moreFriendsClicked()
 {
   log('moreFriendsClicked');
   $('#moreFriends').show();
-  $('#friends').show(); // FIXME - unhide #friends in HTML
 }
 
 function login()
