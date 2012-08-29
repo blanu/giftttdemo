@@ -5,6 +5,7 @@
     <style type="text/css">
         .hidden{
 			display: none;
+			width:900px;
         }
 
         .name{
@@ -26,18 +27,26 @@
 		body {
 			background-image: url('http://www.gifttt.com/bgtile.png');
 		}
+		
+		.text{
+			font-family: 'Quicksand', sans-serif;
+			color: #363636;
+			text-shadow:1px 1px #FFffff;
+		}
     </style>
+    	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+	<title>Gifttt - Reminders</title>
   </head>
   <body>
 
-  <div style="width: 900px; border: 1px solid red; margin-left: auto; margin-right: auto;margin-top:-10px; background: #ffffff;">
+  <div style="width: 900px; border: 1px #e1e1e1; margin-left: auto; margin-right: auto;margin-top:-10px; background: #ffffff;">
    <div style="width: 900px; height: 100px;">
     <div id="fb-root"></div>
 
     <div style="margin-left:49px; margin-top:12px;width:75px;height:77px;float:left;"><img src="present.png"/></div>
     <div class="logo"><img src="logosmall.png"/></div>
 
-    <div style="float:right; margin-right:49px; margin-top:22px;">
+    <div style="float:right; margin-right:436px; margin-top:40px;">
     <div id="login" class="fb-login-button" autologoutlink="true" scope="email,friends_birthday"></div>
 	</div>
 	</div>
@@ -45,11 +54,24 @@
 		<div style="width: 830px; height: 1px;background-color:#cccccc; float: left; margin-left:34px;"></div>
 	</div>
     <div id="main" class="hidden">
-        <span id="reminders">Gifttt reminders</span>
-        <button id="addPeople">Add People</button>
-        <input type="text" value="Search"/>
+        
+        <span id="reminders">
+        	<div style="width: 830px; height:60px; margin:0 auto;">
+       			<div class="text" style="width: 302px; height:36px; font-size: 20pt; margin-top:12px; float: left;">
+					Gifttt Reminders
+        		</div>
+        		
+        		<div style ="float:right; width: 302px; height:36px; margin-top: 12px;">
+        			<button id="addPeople">Add People</button>
+       				<input style="padding: 2px; font-size: 16px; font-family: 'Quicksand', sans-serif; color: #363636;" class="text" value="Search"/>
+        		</div>
+        		
+			</div>
+        </span>
 
-        <hr/>
+	<div style="width: 900px;">
+		<div style="width: 830px; height: 1px;background-color:#cccccc; float: left; margin-left:34px;"></div>
+	</div>
 
         <div id="people">
             <div id="peopleTemplate" class="template">
