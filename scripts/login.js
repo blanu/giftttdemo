@@ -65,11 +65,19 @@ function moreFriendsClicked()
   $('#moreFriends').show();
 }
 
+function addButtonClicked()
+{
+  log('addButtonClicked');
+  log(this);
+  log($(this).parents().first().next());
+}
+
 function login()
 {
   log('login');
 
   $('#moreFriendsButton').click(moreFriendsClicked);
+  $('.addButton').click(addButtonClicked);
 
   FB.Event.subscribe('auth.login', function(response) {
     log('auth.login');
