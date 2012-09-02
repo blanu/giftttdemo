@@ -38,13 +38,89 @@
                         font-family:Arial,Helvetica,sans-serif;
                         text-shadow:1px 1px #FFffff;
         }
+        
+        .peopleContainer {
+	        width: 268px; margin-left: 34px; margin-top:34px; float:left;
+        }
+        
+        .userImage
+        {
+	         width:50px; height:50px; float:left;
+        }
+        
+        .userName
+        {
+	        width:208px; float:left; text-align: center;padding: 3px;
+        }
+        
+        .tinyPresent
+        {
+	        width:46px; float:left; text-align: right;padding: 3px;
+        }
+        
+        .tinyGiftIcon
+        {
+	        width:155px; float:left; padding: 2px;
+        }
+        
+        .holidaysHeader
+        {
+	         width:263px; height:27px; float:left; margin-top: 15px; background-image: url('bar.png');
+        }
+        
+        .holidaysHeaderText
+        {
+	        width:67px; height:17px; color: #7e7e7e; margin-left: 10px; margin-top: 5px;
+        }
+        
+        .addButton
+        {
+	        border: none; float: right; height:31px; width:33px; background: url('addbuttonsmall.png'); margin-top: -28px; margin-right: 3px;
+        }
+        
+        .holidays
+        {
+	        margin-top: 10px;
+	        float: left;
+        }
+        
+        .holidayItem
+        {
+	        list-style: none; width:261px; height:27px; float:left; margin-top: 1px; border: 1px solid #cccccc;
+        }
+        
+        .itemText
+        {
+	        list-style: none; width:252px; height:20px; float:right; margin-top: 6px; font-size:14px;
+        }
+        
+        .giftsHeader
+        {
+	         width:263px; height:27px; float:left; margin-top: 15px; background-image: url('bar.png');
+        }
+        
+        .giftsHeaderText
+        {
+	        width:87px; height:17px; color: #7e7e7e; margin-left: 10px; margin-top: 5px;
+        }
+        
+        .giftItem
+        {
+	        list-style: none; width:261px; height:27px; float:left; margin-top: 1px; border: 1px solid #cccccc;
+        }
+        
+        .peopleHeader
+        {
+	        float: left;
+        }
   </style>
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700'rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	<!--Container-->
-		<div style="width:900px; height:100%; overflow:scroll;  margin-top:-10px; margin-left:auto; margin-right:auto; background:#ffffff;">
+	  <div id="center" style="width:900px; margin-top:-10px; margin-left:auto; margin-right:auto;">
+		<div id="container" style="width:900px; margin-top:-10px; margin-left:auto; margin-right:auto; background:#ffffff; float:left;">
 
 		<!--Header-->
 			<div style="width:900px; height:105px;">
@@ -99,51 +175,53 @@
         		<!--Template for each user block-->
         			<div id="peopleTemplate" class="template">
           				<!--People Container-->
-          					<div style="width: 268px; margin-left: 34px; margin-top:34px; float:left;">
-							<!--User Image-->
-            					<div style="width:50px; height:50px; float:left;">
-                					<img class="profilePic" src="user.png"/>
-            					</div>
-
-            				<!--User Name-->
-            					<div style="width:208px; float:left; text-align: center;padding: 3px;">
-                					<strong>
-                    					<span class="text name">
-                    						Tester McTesterson
-                    					</span>
-                					</strong>
-            					</div>
-
-            				<!--Tiny Present And Ammount-->
-            					<div style="width:46px; float:left; text-align: right;padding: 3px;">
-                					<span class="text gifnum">
-                						3
-                					</span>
-            					</div>
-
-            				<!--Tiny Gift Icon-->
-            					<div style="width:155px; float:left; padding: 2px;">
-                					<img src="tinygift.png"/>
-            					</div>
+          					<div class="peopleContainer">
+	          					<div class="peopleHeader">
+								<!--User Image-->
+	            					<div class="userImage">
+	                					<img class="profilePic" src="user.png"/>
+	            					</div>
+	
+	            				<!--User Name-->
+	            					<div class="userName">
+	                					<strong>
+	                    					<span class="text name">
+	                    						Tester McTesterson
+	                    					</span>
+	                					</strong>
+	            					</div>
+	
+	            				<!--Tiny Present And Ammount-->
+	            					<div class="tinyPresent">
+	                					<span class="text gifnum">
+	                						3
+	                					</span>
+	            					</div>
+	
+	            				<!--Tiny Gift Icon-->
+	            					<div class="tinyGiftIcon">
+	                					<img src="tinygift.png"/>
+	            					</div>
+	          					</div>
 
             				<!--Holiday Section-->
             					<div class="holidays">
-              						<div class="holdaysHeader" style="width:263px; height:27px; float:left; margin-top: 15px; background-image: url('bar.png');">
+              						<div class="holidaysHeader">
               							<div class="text2 holidaysText">
-                  							<div style="width:67px; height:17px; color: #7e7e7e; margin-left: 10px; margin-top: 5px;">
+                  							<div class="holidaysHeaderText">
                       							<strong>
                       								Holidays
                       							</strong>
                   							</div>
                 						</div>
 
-                						<button class="addButton" style="border: none; float: right; height:31px; width:33px; background: url('addbuttonsmall.png'); margin-top: -28px; margin-right: 3px;">
+                						<button class="addButton">
                   						</button>
               						</div>
 
               						<div class="holidayItems">
-                						<div class="text2 holidayItem" style="list-style: none; width:261px; height:27px; float:left; margin-top: 1px; border: 1px solid #cccccc;">
-                   							<div class="itemTemplate" style="list-style: none; width:252px; height:20px; float:right; margin-top: 6px; font-size:14px;">
+                						<div class="text2 holidayItem">
+                   							<div class="itemTemplate itemText">
                       							Click the + to add holidays
                    							</div>
                 						</div>
@@ -152,22 +230,22 @@
 
             				<!--Gifts Section-->
             					<div class="gifts">
-              						<div class="giftsHeader" style="width:263px; height:27px; float:left; margin-top: 15px; background-image: url('bar.png');">
+              						<div class="giftsHeader">
               							<div class="text2 giftsText">
-                  							<div style="width:87px; height:17px; color: #7e7e7e; margin-left: 10px; margin-top: 5px;">
+                  							<div class="giftsHeaderText">
                     							<strong>
                     								Gift Ideas
                     							</strong>
                   							</div>
                 						</div>
 
-                						<button class="addButton" style="border: none; float: right; height:31px; width:33px; background: url('addbuttonsmall.png'); margin-top: -28px; margin-right: 3px;">
+                						<button class="addButton">
                 						</button>
              						</div>
 
 									<div class="giftItems">
-                						<div class="text2 giftItem" style="list-style: none; width:261px; height:27px; float:left; margin-top: 1px; border: 1px solid #cccccc;">
-                    						<div id="itemTemplate" style="width:252px; height:20px; float:right; margin-top: 6px; font-size:14px;">
+                						<div class="text2 giftItem">
+                    						<div class="itemTemplate itemText">
                       							Click the + to add gift ideas
                     						</div>
                 						</div>
@@ -193,6 +271,7 @@
   			</div>
   			<!--End of Hidden Class-->
   		</div>
+	  </div>
 
   <script src="scripts/jquery.min.js" type="text/javascript"></script>
   <script src="scripts/jquery-ui.min.js" type="text/javascript"></script>

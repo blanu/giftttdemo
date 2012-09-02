@@ -10,18 +10,22 @@ function gotFriends(response)
   for(var i=0; i<response.length; i++)
   {
     var friend=response[i];
-
+    
     var instance=$('#peopleTemplate').clone();
     instance.attr('id', friend.name);
     instance.find('.name').text(friend.name);
 
     if(friend.birthday!=null)
     {
-      instance.find('.holidayItem').first().text(scrubDate(friend.birthday));
+      instance.find('.holidayItem .itemText').first().text(scrubDate(friend.birthday));
     }
 
     $('#friends').append(instance);
   }
+  
+  var height=response.length*115+350;
+  log('height: '+height);
+//  $('#container').height(height);
 }
 
 function loadFriends()
@@ -69,7 +73,16 @@ function addButtonClicked()
 {
   log('addButtonClicked');
   log(this);
-  log($(this).parents().first().next());
+  var itemTemplate=$(this).parents().first().next().find('.itemTemplate').first();
+  if(itemTemplate)
+  {
+    var templateContainer=$(itemTemplate).parents().first();
+    log(templateContainer);
+    $(templateContainer).empty();
+    var html='<input type="text" class="itemInput"/>';
+    $(templateContainer).append(html);
+//    $('.itemInput').
+  }
 }
 
 function login()
