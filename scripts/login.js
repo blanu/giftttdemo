@@ -23,9 +23,8 @@ function gotFriends(response)
     $('#friends').append(instance);
   }
   
-  var height=response.length*115+350;
-  log('height: '+height);
-//  $('#container').height(height);
+  $('.holidaysHeader .addButton').click(addHolidayButtonClicked);
+  $('.giftsHeader .addButton').click(addGiftButtonClicked);
 }
 
 function loadFriends()
@@ -69,19 +68,75 @@ function moreFriendsClicked()
   $('#moreFriends').show();
 }
 
-function addButtonClicked()
+function itemInputKeyPressed(event)
+{
+  if(event.keyCode==13) // Pressed Enter.
+  {
+      var value=$(this).val();
+      log('value:');
+      log(value);
+      var parent=$(this).parents().first();
+      parent.empty();
+      var item='<div class="text2 holidayItem"><div class="itemText">'+value+'</div></div>';
+      parent.append(item);
+  }  
+}
+
+function addHolidayButtonClicked()
 {
   log('addButtonClicked');
+  log('this');
   log(this);
-  var itemTemplate=$(this).parents().first().next().find('.itemTemplate').first();
-  if(itemTemplate)
+  log('itemTemplate');
+  log(itemTemplate);
+  if($(this).parents().first().next().find('.itemTemplate').length>0)
   {
+    var itemTemplate=$(this).parents().first().next().find('.itemTemplate').first();
     var templateContainer=$(itemTemplate).parents().first();
     log(templateContainer);
     $(templateContainer).empty();
     var html='<input type="text" class="itemInput"/>';
     $(templateContainer).append(html);
-//    $('.itemInput').
+    $('.itemInput').keypress(itemInputKeyPressed);
+  }
+  else
+  {
+    log('no item template');
+    var itemTemplate=$(this).parents().first().next().find('.holidayItem').first();
+    var templateContainer=$(itemTemplate).parents().first();
+    log(templateContainer);
+    var html='<div class="text2 holidayItem"><input type="text" class="itemInput"/></div>';
+    $(templateContainer).append(html);
+    $('.itemInput').keypress(itemInputKeyPressed);
+  }
+}
+
+function addGiftButtonClicked()
+{
+  log('addButtonClicked');
+  log('this');
+  log(this);
+  log('itemTemplate');
+  log(itemTemplate);
+  if($(this).parents().first().next().find('.itemTemplate').length>0)
+  {
+    var itemTemplate=$(this).parents().first().next().find('.itemTemplate').first();
+    var templateContainer=$(itemTemplate).parents().first();
+    log(templateContainer);
+    $(templateContainer).empty();
+    var html='<input type="text" class="itemInput"/>';
+    $(templateContainer).append(html);
+    $('.itemInput').keypress(itemInputKeyPressed);
+  }
+  else
+  {
+    log('no item template');
+    var itemTemplate=$(this).parents().first().next().find('.giftItem').first();
+    var templateContainer=$(itemTemplate).parents().first();
+    log(templateContainer);
+    var html='<div class="text2 giftItem"><input type="text" class="itemInput"/></div>';
+    $(templateContainer).append(html);
+    $('.itemInput').keypress(itemInputKeyPressed);
   }
 }
 
@@ -90,7 +145,6 @@ function login()
   log('login');
 
   $('#moreFriendsButton').click(moreFriendsClicked);
-  $('.addButton').click(addButtonClicked);
 
   FB.Event.subscribe('auth.login', function(response) {
     log('auth.login');
