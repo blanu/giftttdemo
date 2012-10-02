@@ -23,142 +23,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "gift.html",
-			"settings":
-			{
-				"buffer_size": 1204,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "gift.js",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "calendar.html",
-			"settings":
-			{
-				"buffer_size": 1301,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "calendar.js",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "thanks.html",
-			"settings":
-			{
-				"buffer_size": 4380,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "orderList.html",
-			"settings":
-			{
-				"buffer_size": 753,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "orderList.js",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 4794,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "beta.html",
-			"settings":
-			{
-				"buffer_size": 5202,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "beta.js",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "emails.html",
-			"settings":
-			{
-				"buffer_size": 747,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "emails.js",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "login.html",
-			"settings":
-			{
-				"buffer_size": 4377,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "gifttt.html",
-			"settings":
-			{
-				"buffer_size": 1032,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "orders.html",
-			"settings":
-			{
-				"buffer_size": 1301,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scripts/login.js",
-			"settings":
-			{
-				"buffer_size": 1816,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scripts/facebook.js",
-			"settings":
-			{
-				"buffer_size": 711,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -166,8 +30,12 @@
 		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"",
+				"Indentation: Reindent Lines"
+			]
 		],
-		"width": 392.0
+		"width": 575.0
 	},
 	"console":
 	{
@@ -184,6 +52,24 @@
 	},
 	"file_history":
 	[
+		"/Users/ischooluser/gifttt/login2.html",
+		"/Users/ischooluser/gifttt/scripts/facebook.js",
+		"/Users/ischooluser/gifttt/orders.html",
+		"/Users/ischooluser/gifttt/gifttt.html",
+		"/Users/ischooluser/gifttt/login.html",
+		"/Users/ischooluser/gifttt/emails.js",
+		"/Users/ischooluser/gifttt/emails.html",
+		"/Users/ischooluser/gifttt/beta.js",
+		"/Users/ischooluser/gifttt/beta.html",
+		"/Users/ischooluser/gifttt/index.html",
+		"/Users/ischooluser/gifttt/orderList.js",
+		"/Users/ischooluser/gifttt/orderList.html",
+		"/Users/ischooluser/gifttt/thanks.html",
+		"/Users/ischooluser/gifttt/calendar.js",
+		"/Users/ischooluser/gifttt/calendar.html",
+		"/Users/ischooluser/gifttt/gift.js",
+		"/Users/ischooluser/gifttt/gift.html",
+		"/Users/ischooluser/gifttt/scripts/login.js",
 		"/Users/ischooluser/py-obfsproxy/src/obfsproxy/transports/dust/socksDustProxy.py",
 		"/Users/ischooluser/py-obfsproxy/src/obfsproxy/transports/dust/dust.py",
 		"/Users/ischooluser/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
@@ -205,6 +91,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"reminders",
+			"!>",
+			"==",
 			"('slow')",
 			"value",
 			"coder"
@@ -215,6 +104,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			">",
+			"--",
 			"()",
 			"val"
 		],
@@ -227,480 +118,8 @@
 	"groups":
 	[
 		{
-			"selected": 15,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "gift.html",
-					"settings":
-					{
-						"buffer_size": 1204,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1102,
-								1102
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "gift.js",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "calendar.html",
-					"settings":
-					{
-						"buffer_size": 1301,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1146,
-								1146
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 54.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "calendar.js",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "thanks.html",
-					"settings":
-					{
-						"buffer_size": 4380,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1224.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "orderList.html",
-					"settings":
-					{
-						"buffer_size": 753,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								713,
-								713
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "orderList.js",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 4794,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4644,
-								4644
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1374.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "beta.html",
-					"settings":
-					{
-						"buffer_size": 5202,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 369.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "beta.js",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 505.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "emails.html",
-					"settings":
-					{
-						"buffer_size": 747,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								710,
-								710
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "emails.js",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "login.html",
-					"settings":
-					{
-						"buffer_size": 4377,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3006,
-								3006
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1036.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "gifttt.html",
-					"settings":
-					{
-						"buffer_size": 1032,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								994,
-								994
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "orders.html",
-					"settings":
-					{
-						"buffer_size": 1301,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1146,
-								1146
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 54.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "scripts/login.js",
-					"settings":
-					{
-						"buffer_size": 1816,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								307,
-								307
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "scripts/facebook.js",
-					"settings":
-					{
-						"buffer_size": 711,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								349,
-								349
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

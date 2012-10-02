@@ -67,6 +67,40 @@ var post=function(url, data, successCallback)
     });
 }
 
+var jamesProtection=function(s)
+{
+    if(s.indexOf('"')!=-1)
+    {
+        return true;
+    }
+    else if(s.indexOf("'")!=-1)
+    {
+        return true;
+    }
+    else if(s.indexOf('<')!=-1)
+    {
+        return true;
+    }
+    else if(s.indexOf('>')!=-1)
+    {
+        return true;
+    }
+    else if(s.indexOf('%')!=-1)
+    {
+        return true;
+    }
+    else if(s.indexOf('\\')!=-1)
+    {
+        return true;
+    }
+    else if(s.indexOf('&')!=-1)
+    {
+        return true;
+    }
+    
+    return false;
+}
+
 var submitForm=function()
 {
     log('submitForm()');
@@ -79,6 +113,12 @@ var submitForm=function()
     }
 
     if(!validateEmail(email))
+    {
+      $('#emailInput').val('');
+      return false;
+    }
+    
+    if(jamesProtection(email))
     {
       $('#emailInput').val('');
       return false;
